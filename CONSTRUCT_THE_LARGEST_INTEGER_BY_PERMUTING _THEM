@@ -3,7 +3,7 @@
 #include<string.h>
 #include<sstream>
 using namespace std; 
-void BubbleSort(int);
+void CLI(int);
 void swap(int*,int*);
 int a[100]={0};
 int main()
@@ -16,7 +16,7 @@ int main()
     {
         scanf("%d",&a[i]);
     }
-   BubbleSort(n);
+   CLI(n);
     printf("Sorted Array:");
     for(i=0;i<n;i++)
     {
@@ -24,7 +24,7 @@ int main()
     }
     return 0;
 }
-void BubbleSort(int n)
+void CLI(int n)
 {
     int i,j; char s1[20],s2[20],s3[20];
      for(i=n-1;i>0;i--)
