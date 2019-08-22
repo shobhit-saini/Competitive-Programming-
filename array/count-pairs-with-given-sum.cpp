@@ -21,3 +21,20 @@ using namespace std;
 		{
 			m[ar[i]]++;
 		}
+		
+		for(i = 0; i < N; i++)
+		{
+			count+= m[sum - ar[i]]; 
+		     /*	if (arr[i], arr[i]) pair satisfies the condition, 
+			then we need to ensure that the count is 
+			decreased by one such that the (arr[i], arr[i]) 
+			pair is not considered*/
+			if(ar[i] == sum - ar[i])
+			{
+				count--;
+			}
+		}
+		
+		cout<< "Count of pairs is:"<< count/2;
+	return 0;
+	}
